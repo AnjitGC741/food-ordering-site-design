@@ -39,7 +39,8 @@ a{
 .nav-links ul li a{
   font-size: 1.6rem;
   color:white !important;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: 1px;
   transition: all 0.3s;
 }
 .nav-links ul li a:hover{
@@ -70,6 +71,105 @@ a{
 }
 .logIn:hover{
   background-color: #f6be87;
+}
+.for-logined-user{
+  display: flex;
+  gap: 1rem;
+}
+.favorite{
+  color: white;
+  font-size: 3.2rem;
+  margin-right: 15px;
+  transition: all 0.3s;
+  cursor:pointer;
+  margin-top: 5px;
+}
+.cart{
+  color: white;
+  font-size: 3.2rem;
+  margin-right: 15px;
+  transition: all 0.3s;
+  cursor:pointer;
+  margin-top: 5px;
+}
+.favorite:hover{
+  color: #f6be87;
+}
+.cart:hover{
+  color: #f6be87;
+}
+.user-btn{
+  background:none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor:pointer;
+}
+.user-btn:hover .user{
+  color: #f6be87;
+}
+.user{
+  color: white;
+  font-size: 3.8rem;
+}
+.user2{
+  color: #000;
+  font-size: 3.8rem;
+  color: #525252;
+}
+.sub-menu-wrap{
+  position: absolute;
+  top: 100%;
+  right: 5px;
+  min-width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+  max-height: 400px;
+}
+.sub-menu{
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+}
+.user-info{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.user-info p{
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.sub-menu hr{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+.sub-menu-link{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-decoration: none;
+  color: #525252;
+  margin-top: 12px;
+  margin-left: 5px;
+  transition: all 0.3s;
+}
+.sub-menu-link:hover{
+  padding-left: 10px;
+}
+.sub-menu-link ion-icon{
+  font-size: 2.2rem;
+}
+.sub-menu-link p{
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 /* navbar design ends */
 .hero-section {
@@ -192,7 +292,7 @@ a{
 }
 .resturant-info{
  position: absolute;
- bottom: 0;
+ bottom: 15px;
  left: 3rem;
  min-width: 450px;
  height:200px; 
@@ -238,6 +338,12 @@ a{
   font-weight: 300;
 }
 .minimum-order{
+  margin-top: 8px;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+}
+.service-type{
   margin-top: 8px;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;

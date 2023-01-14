@@ -16,16 +16,35 @@
         </div>
         <div class="nav-links">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Add Resturant</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resturantPage.html">Add Resturant</a></li>
             <li><a href="#">Deliver Food</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
-        <div class="login-and-signup">
+        <!-- <div class="login-and-signup">
           <a href="#" class="signIn">Sign in</a>
           <a href="#" class="logIn">Log in</a>
+        </div> -->
+        <div class="for-logined-user">
+          <a><ion-icon name="heart-outline" class="favorite"></ion-icon></a>
+          <a><ion-icon name="cart-outline" class="cart"></ion-icon></a>
+          <div>
+            <div onclick="toggleMenu();" class="user-btn"><ion-icon name="person-circle-outline" class="user"></ion-icon></div>
+          </div>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <div class="user-btn"><ion-icon name="person-circle-outline" class="user2"></ion-icon></div>
+              <p>Bijya chhetri</p>
+            </div>
+            <hr>
+              <a href="#" class="sub-menu-link"><ion-icon name="person-outline"></ion-icon> <p>Profile</p></a>
+              <a href="#" class="sub-menu-link"><ion-icon name="heart-outline"></ion-icon><p>Favourite</p> </a>
+              <a href="#" class="sub-menu-link"><ion-icon name="log-out-outline"></ion-icon><p>Log out</p> </a>
+          </div>
         </div>
       </section>
       <section class="resturant-section">
@@ -42,8 +61,16 @@
                 <p class="resturant-location"><ion-icon name="location" class="icon1"></ion-icon> kathmandu,Nepal</p>
                 <p class="resturant-type"><ion-icon name="pizza" class="icon"></ion-icon>Indian</p>
                 <p class="minimum-order"><ion-icon name="cash" class="icon"></ion-icon>Minimum order : 500</p>
+                <p class="service-type"><ion-icon name="bag-handle" class="icon"></ion-icon>Delivery and Pickup</p>
+                
             </div>
           </div>
       </section>
+      <script>
+         function toggleMenu(){
+        let subMenu = document.getElementById("subMenu");
+        subMenu.classList.toggle("open-menu");
+       }
+      </script>
 </body>
 </html>
