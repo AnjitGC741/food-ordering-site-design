@@ -22,7 +22,7 @@ a{
   align-items: center;
   justify-content: space-between;
   background-color: transparent; 
-  position: fixed;
+  position: absolute;
   z-index: 1;
 }
 .logo h1{
@@ -265,8 +265,8 @@ a{
   }
   .microphone{
     position: absolute;
-    font-size: 40px;
-    right: 0;
+    font-size:3.5rem;
+    right: 5px;
     margin-top: 13px;
     color: #8a8988;
   }
@@ -349,3 +349,57 @@ a{
   letter-spacing: 0.2rem;
   font-weight: 300;
 }
+/* browse by cuisine section */
+.browse-by-cuisine{
+  width: 100%;
+  padding: 50px 10px;
+  /* background-color: rebeccapurple; */
+}
+.browse-by-cuisine h2{
+  color: #0d1115;
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 3.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.cuisine-links{
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+.cuisine-links a{
+  color: #0d1115;
+}
+.cuisine-img{
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+}
+.cuisine-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  transition: transform 2s;
+}
+.cuisine-links a:hover img {
+  transform: scale(1.3);
+}
+.cuisine-name{
+  padding: 5px 0;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+/* browse by cuisine section ends */
+
+

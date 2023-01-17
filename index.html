@@ -25,17 +25,17 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
-    <!-- <div class="login-and-signup">
+    <div class="login-and-signup">
       <a href="#" class="signIn">Sign in</a>
       <a href="#" class="logIn">Log in</a>
-    </div> -->
-    <div class="for-logined-user">
+    </div>
+    <!-- <div class="for-logined-user">
       <a><ion-icon name="heart-outline" class="favorite"></ion-icon></a>
       <a><ion-icon name="cart-outline" class="cart"></ion-icon></a>
       <div>
         <div onclick="toggleMenu();" class="user-btn"><ion-icon name="person-circle-outline" class="user"></ion-icon></div>
       </div>
-    </div>
+    </div> -->
     <div class="sub-menu-wrap" id="subMenu">
       <div class="sub-menu">
         <div class="user-info">
@@ -62,8 +62,8 @@
                 <form>
                   <div class="input-btn">
                     <div class="input-box">
-                      <input type="text" placeholder="Enter the name of resturant or cousine">
-                      <!-- <ion-icon name="mic-circle" class="microphone"></ion-icon> -->
+                      <input type="text" placeholder="Enter the name of resturant or cuisine">
+                      <!-- <ion-icon name="mic" class="microphone"></ion-icon> -->
                     </div>
                     <div class="btn-box">
                       <button>Search<span><i class="fa fa-angle-right" style="font-size:36px;color:#ffffff"></i></span></button>
@@ -73,6 +73,59 @@
                 </form>
               </div>
           </div>
+    </section>
+    <section class="browse-by-cuisine">
+      <h2>Browse by cuisine</h2>
+      <div class="cuisine-links">
+        <a href="#">
+          <div class="cuisine-img-and-cuisine-name">
+              <div class="cuisine-img">
+                <img src="./img/newari-food.jpg" alt="">
+              </div>   
+              <p class="cuisine-name">Newari</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="cuisine-img-and-cuisine-name">
+              <div class="cuisine-img">
+                <img src="./img/nepali.jpg" alt="">
+              </div> 
+              <p class="cuisine-name">Nepali</p>  
+          </div>
+        </a>
+        <a href="#">
+          <div class="cuisine-img-and-cuisine-name">
+              <div class="cuisine-img">
+                <img src="./img/bakery.jpg" alt="">
+              </div>   
+              <p class="cuisine-name">Bakery</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="cuisine-img-and-cuisine-name">
+              <div class="cuisine-img">
+                <img src="./img/Korean.jpg" alt="">
+              </div>   
+              <p class="cuisine-name">Korean</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="cuisine-img-and-cuisine-name">
+              <div class="cuisine-img">
+                <img src="./img/momo.jfif" alt="">
+              </div>   
+              <p class="cuisine-name">MoMo</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="cuisine-img-and-cuisine-name">
+              <div class="cuisine-img">
+                <img src="./img/burger.jpg" alt="">
+              </div>   
+              <p class="cuisine-name">Burger</p>
+          </div>
+        </a>
+      </div>
     </section>
     <script>
       function topic1()
@@ -89,60 +142,3 @@
     </script>
 </body>
 </html>
-<nav>
-  <div class="navbar-main-div">
-      <h1>B.</h1>
-      <div class="nav-links">
-          <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-          </ul>
-      </div>
-      <div class="cart-box">
-      @if((session()->get('loginCustomer')) === "")
-      <li><a href="{{url('/signup')}}" class="sign-in-link">
-              <ion-icon name="person-outline"></ion-icon><span style="margin-left: 5px;">sign in</span>
-          </a></li>
-      <li><a href="{{url('/login')}}" class="log-in-link">
-              <ion-icon name="log-in-outline"></ion-icon><span style="margin-left: 5px;">login</span>
-          </a></li>
-      @else
-      <li>
-          <ion-icon name="cart" class="cart"></ion-icon>
-      </li>
-      <li>
-          <ion-icon name="heart" class="cart"></ion-icon>
-      </li>
-      <li>
-      <div class="adminBox">
-      <span style="display: none;"> {{$value=session()->get('loginCustomer')}}</span>
-              <button class="click" style="color: #fff; font-size:30px; font-family:'Poppins', sans-serif; ">{{$value[0]}}</button>
-
-              <div class="list">
-
-                  <button class="links" style="color: #696969; font-family:'Poppins', sans-serif;"><a href="#"><i class="fa fa-user-circle-o" style="color:green ; font-size:25px;"></i>profile</a></button>
-
-                  <button class="links" style="color: #696969; font-family:'Poppins', sans-serif;"><a href="#"><i class="fa fa-sign-out" style="color:darkorange ; font-size:25px;"></i>Log out</a></button>
-
-              </div>
-              <script>
-
-                  let click = document.querySelector('.click');
-
-                  let list = document.querySelector('.list');
-
-                  click.addEventListener("click", () => {
-
-                      list.classList.toggle('newlist');
-
-                  });
-              </script>
-          </div>
-      </li>
-      @endif
-      </div>
-
-  </div>
-</nav>
