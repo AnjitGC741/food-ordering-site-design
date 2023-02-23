@@ -284,6 +284,7 @@ a{
     font-size: 3rem;
 }
 /* for resturant page */
+
 .resturant-section
 {
   height: 60vh;
@@ -303,6 +304,7 @@ a{
 .resturant-logo{
   height: 100%;
   width: 200px;
+  position: relative;
 }
 .resturant-logo img{
   height: 100%;
@@ -409,6 +411,7 @@ a{
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 0 48px 0 40px;
 }
 .totalRestaurant p {
   font-size: 25px;
@@ -422,7 +425,7 @@ a{
 }
 .controller {
   display: flex;
-  gap: 100px;
+  gap: 80px;
 }
 
 .filter {
@@ -526,6 +529,345 @@ a{
 .links:hover {
   background-color: rgba(203, 203, 203, 0.5);
 }
+/* new */
+.restaurant-directory{
+  max-width: 130rem;
+  height: 30vh;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 40px;
+}
+.restaurant-directory .restaurant-details:hover{
+  transform: scale(1.1);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
+.restaurant-directory .restaurant-details{
+  width: 28rem;
+  border: 1px solid  rgb(214, 214, 214);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.restaurant-directory .restaurant-details .restaurant-logo{
+  width: 28rem;
+  height: 28rem;
+}
+.restaurant-directory .restaurant-details .restaurant-logo img{
+  width: 100%;
+  height: 100%;
+}
+.restaurant-details .restaurant-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  gap: 0.8rem;
+  padding: 15px 25px;
+}
+.restaurant-details .restaurant-info .restaurant-name{
+  font-size: 2rem;
+}
+.restaurant-details .restaurant-info p{
+  font-size: 1.3rem;
+  letter-spacing: 0.8px;
+}
+.restaurant-list-icon{
+  font-size: 1.3rem;
+  color: #525252;
+}
+.for-margin{
+  margin-right: 5px;
+}
+.for-status-favorite{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.favorite-btn{
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+.status{
+  width: 80px;
+  font-size: 1rem;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 2px;
+}
+.open{
+  background-color: forestgreen;
+}
+.close{
+  background-color:red;
+}
 
+/*popup box*/
+.changeProfile{
+  position: absolute;
+  bottom: 0;
+  right: 3rem;
+  padding: 7px 10px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.changeBackgroundImgOption{
+  position: absolute;
+  bottom: 80px;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.changeProfileImgOption{
+  position: absolute;
+  bottom:5rem;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.uploadImgBtn{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 40px;
+  border-style: none;
+  font-size: 1.4rem;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+.deleteImgBtn{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 40px;
+  border-style: none;
+  font-size: 1.4rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+.uploadImgBtn:hover{
+  background-color: #d4d4d4;
+}
+.deleteImgBtn:hover{
+  background-color: #d4d4d4;
+}
+.changeBackground{
+  position: absolute;
+  bottom: 40px;
+  right: 3rem;
+  background-color:white;
+  display: flex;
+  padding: 2px 4px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* admin-restaurant-navbar */
+.secondary-navbar{
+  width: 100%;
+}
+.secondary-navbar div{
+  max-width: 130rem;
+  padding: 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
+}
+.secondary-navbar-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+.secondary-navbar-link{
+  list-style: none;
+}
+.secondary-navbar-link a{
+  text-decoration: none;
+  color: #181818;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+.secondary-navbar-link a:hover{
+  color: #FF7F00;
+}
+/* popup box design */
+.editProfileForm{
+  min-width: 50rem;
+  padding:30px;
+  border:1px solid #939292;
+  position: fixed;
+  z-index: 99;
+  margin:130px 500px;
+  background-color: #ffffff;
+  visibility: hidden;
 
+}
+.editProfileForm h2{
+  margin-bottom: 10px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+.editProfileForm hr{
+  margin-bottom: 20px;
+}
+.addFood{
+  min-width: 50rem;
+  padding:30px;
+  border:1px solid #939292;
+  /* position: fixed;
+  z-index: 99; */
+  margin:130px 500px;
+  background-color: #ffffff;
+}
+/* for rating */
+.container-rating{
+  position: relative;
+  width: 400px;
+  background:white;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .post{
+  display: none;
+}
+.container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+.container .edit{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container .edit:hover{
+  text-decoration: underline;
+}
+.container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #a7a7a7;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before{
+  content: "I just hate it ";
+}
+#rate-2:checked ~ form header:before{
+  content: "I don't like it ";
+}
+#rate-3:checked ~ form header:before{
+  content: "It is awesome ";
+}
+#rate-4:checked ~ form header:before{
+  content: "I just like it ";
+}
+#rate-5:checked ~ form header:before{
+  content: "I just love it ";
+}
+.container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+
+form .btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: green;
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+form .btn button:hover{
+  background: #1b1b1b;
+}
+/* for food list */
+.for-food-list{
+  width: 25rem;
+  margin-left: 10rem;
+}
+.for-food-img{
+  width: 25rem;
+  height: 20rem;
+}
+.for-food-img img{
+  width: 100%;
+  height: 100%;
+}
+.for-food-description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.food-name{
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.food-price{
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.add-to-cart-btn{
+  border: none;
+  border-radius: 5px;
+  color:white;
+  background-color: #FF7F00;
+  font-size: 1.4rem;
+  padding: 3px 20px;
+}

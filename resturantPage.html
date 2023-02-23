@@ -7,54 +7,114 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Document</title>
 </head>
 <body>
-    <section class="navbar">
-        <div class="logo">
-          <h1>DeliverEase</h1>  
+  <div class="editProfileForm">
+    <h2>Edit restaurnant info</h2>
+    <hr>
+    <form action="" >
+        <div class="mb-3">
+        <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Resturant name</label>
+        <input  style="letter-spacing: 0.8px;" type="text" class="form-control fs-4">
         </div>
-        <div class="nav-links">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resturantPage.html">Add Resturant</a></li>
-            <li><a href="#">Deliver Food</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+        <div class="mb-3">
+        <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">City</label>
+        <input type="text" class="form-control fs-4">
         </div>
-        <!-- <div class="login-and-signup">
-          <a href="#" class="signIn">Sign in</a>
-          <a href="#" class="logIn">Log in</a>
-        </div> -->
-        <div class="for-logined-user">
-          <a><ion-icon name="heart-outline" class="favorite"></ion-icon></a>
-          <a><ion-icon name="cart-outline" class="cart"></ion-icon></a>
-          <div>
-            <div onclick="toggleMenu();" class="user-btn"><ion-icon name="person-circle-outline" class="user"></ion-icon></div>
-          </div>
+        <div class="mb-3">
+        <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Street</label>
+        <input type="text" class="form-control fs-4">
         </div>
-        <div class="sub-menu-wrap" id="subMenu">
-          <div class="sub-menu">
-            <div class="user-info">
-              <div class="user-btn"><ion-icon name="person-circle-outline" class="user2"></ion-icon></div>
-              <p>Bijya chhetri</p>
-            </div>
-            <hr>
-              <a href="#" class="sub-menu-link"><ion-icon name="person-outline"></ion-icon> <p>Profile</p></a>
-              <a href="#" class="sub-menu-link"><ion-icon name="heart-outline"></ion-icon><p>Favourite</p> </a>
-              <a href="#" class="sub-menu-link"><ion-icon name="log-out-outline"></ion-icon><p>Log out</p> </a>
-          </div>
+        <div class="mb-3">
+        <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Minimum order</label>
+        <input type="text" class="form-control fs-4">
         </div>
-      </section>
+        <div class="mb-3">
+        <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Service</label>
+        <select class="form-select fs-4" aria-label="Default select example">
+          <option selected>Delivery & Pickup</option>
+          <option>Delivery Only</option>
+          <option>Pickup Only</option>
+        </select>
+       </div>
+       <button style="width: 100%; height: 50px;" class=" fs-4 mt-3 btn btn-success">Update</button>
+    </form>
+</div>
+<div class="addFood">
+  <h2>Add food to your restaurant</h2>
+  <hr>
+  <form action="">
+    <div class="mb-3">
+      <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Food name</label>
+      <input  style="letter-spacing: 0.8px;" type="text" class="form-control fs-4">
+      </div>
+      <div class="mb-3">
+      <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Food Cuisine</label>
+      <input type="text" class="form-control fs-4">
+      </div>
+      <div class="mb-3">
+        <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Food Type</label>
+        <input type="text" class="form-control fs-4">
+      </div>
+       <div class="mb-3 d-flex align-items-center gap-3">
+        <div class="w-50">
+          <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Food Price</label>
+          <input type="text" class="form-control fs-4">
+        </div>
+        <div class="w-50  mt-1">
+        <label class="fs-4" style="letter-spacing: 0.8px;">Quantity</label>
+        <select class="form-select fs-4" aria-label="Default select example">
+          <option>Plate</option>
+          <option>Cup</option>
+          <option>Piece</option>
+        </select>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="fs-4 mb-1" style="letter-spacing: 0.8px;">Food Image</label>
+        <input type="file" class="form-control fs-4">
+      </div>
+      <button style="width: 100%; height: 50px;letter-spacing:1px;" class=" fs-2 mt-3 btn btn-success">Add</button>
+  </form>
+</div>
       <section class="resturant-section">
         <div class="img-section">
             <img src="./img/rest1.jpg" alt="" />
           </div>
           <div class="linear"></div>
+          <button class="changeBackground" id="changeBackground" onclick="displayBackgroundImgOption();">
+            <ion-icon name="camera" style="font-size: 24px;"></ion-icon><p style="font-size: 12px;">Change Background Image</p>
+          </button>
+
+          <div class="changeBackgroundImgOption" id="changeBackgroundImgOption">
+            <form action="#" method="POST">
+              <label for="file-input">
+                <div class="uploadImgBtn"><ion-icon name="cloud-upload-outline" style="font-size: 24px;"></ion-icon>Upload Image</div>
+               </label>
+              <input type="file" id="file-input" style="display:none;">
+              
+             </form>
+            <button class="deleteImgBtn"><ion-icon name="trash-outline" style="font-size: 24px;" ></ion-icon>Delete Image</button>
+          </div>
           <div class="resturant-info">
             <div class="resturant-logo">
                 <img src="./img/restLogo1.png" alt="">
+                <button class="changeProfile" id="changeProfile" onclick="displayProfileImgOption();">
+                  <ion-icon name="camera" style="font-size: 24px;"></ion-icon>
+                </button>
+            </div>
+            <div class="changeProfileImgOption" id="changeProfileImgOption">
+              <form action="#" method="POST">
+                <label for="file-input">
+                  <div class="uploadImgBtn"><ion-icon name="cloud-upload-outline" style="font-size: 24px;"></ion-icon>Upload Image</div>
+                 </label>
+                <input type="file" id="file-input" style="display:none;">
+                
+               </form>
+              <button class="deleteImgBtn"><ion-icon name="trash-outline" style="font-size: 24px;" ></ion-icon>Delete Image</button>
             </div>
             <div class="resturant-details">
                 <p class="resturant-name"> The Burger House</p>
@@ -66,11 +126,90 @@
             </div>
           </div>
       </section>
+      <section class="secondary-navbar">
+        <div>
+          <ul class="secondary-navbar-links">
+            <li class="secondary-navbar-link"><a href="#">Foods</a></li>
+            <li class="secondary-navbar-link"><a href="#">Unavailable Foods</a></li>
+            <li class="secondary-navbar-link"><a href="#" >Orders</a></li>
+            <li class="secondary-navbar-link"><a href="#" >Analysis</a></li>
+           </ul>
+        </div>
+      </section>
+      <button class="btn btn-success" onclick="editProfile();">Edit</button>
+      <div class="container-rating">
+        <div class="star-widget">
+          <form action="#">
+          <input type="radio" name="rate" id="rate-5" value="5" hidden>
+          <label for="rate-5"><ion-icon name="star"></ion-icon></label>
+          <input type="radio" name="rate" id="rate-4" value="4" hidden>
+          <label for="rate-4" ><ion-icon name="star"></ion-icon></label>
+          <input type="radio" name="rate" id="rate-3" value="3" hidden>
+          <label for="rate-3" ><ion-icon name="star"></ion-icon></label>
+          <input type="radio" name="rate" id="rate-2" value="2" hidden>
+          <label for="rate-2" ><ion-icon name="star"></ion-icon></label>
+          <input type="radio" name="rate" id="rate-1" value="1" hidden>
+          <label for="rate-1"><ion-icon name="star"></ion-icon></label>
+            <header></header>
+            <div class="btn">
+              <button type="submit">Rate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="for-food-list">
+        <div class="for-food-img">
+            <img src="./img/momo.jfif" alt="">
+        </div>
+        <div class="for-food-description">
+            <p class="food-name">Veg Momo</p>
+            <p class="food-price">Rs 200</p>
+            <button  class="add-to-cart-btn">Add To Cart</button>
+        </div>
+      </div>
       <script>
-         function toggleMenu(){
+        const btn = document.querySelector("button");
+        const widget = document.querySelector(".star-widget");
+        const editBtn = document.querySelector(".edit");
+        btn.onclick = ()=>{
+          widget.style.display = "none";
+          editBtn.onclick = ()=>{
+            widget.style.display = "block";
+          }
+          return false;
+        }
+      </script>
+      <script>
+      function toggleMenu(){
         let subMenu = document.getElementById("subMenu");
         subMenu.classList.toggle("open-menu");
        }
+       function displayBackgroundImgOption()
+       {
+        let editOption = document.getElementById("changeBackgroundImgOption");
+        if(editOption.style.visibility === "hidden")
+        {
+          editOption.style.visibility = "visible";
+        }
+        else{
+          editOption.style.visibility = "hidden";
+        }
+       }
+       function displayProfileImgOption()
+       {
+        let editOption = document.getElementById("changeProfileImgOption");
+        if(editOption.style.visibility === "hidden")
+        {
+          editOption.style.visibility = "visible";
+        }
+        else{
+          editOption.style.visibility = "hidden";
+        }
+       }
+
       </script>
 </body>
 </html>
