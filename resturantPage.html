@@ -222,7 +222,52 @@
           </div>
         </div>
       </div>
+      <div class="verificationMessageBox">
+          <ion-icon name="storefront" class="msg-restaurant-icon"></ion-icon>
+         <p class="verification-msg"><strong style="margin-right: 10px;">Info!</strong>Your restaurant is not verified yet.</p>
+      </div>
+      <!-- customer review section -->
+      <div class="customer-review">
+          <div class="customer-review-box">
+            <div class="customer-review-img-name">
+              <p class="customer-review-letter">A</p>
+              <p class="customer-review-name">Anjit Gc</p>
+            </div>
+            <div class="customer-review-rate-date">
+              <div class="customer-review-rate">
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+              </div>
+              <p class="customer-review-date">
+                2023-10-03
+              </p>
+            </div>
+            <p class="customer-review-message">It serve high quality foood</p>
+          </div>
+      </div>
       <script>
+        changeStarColor(2.5);
+        function changeStarColor(ratingValue) {
+        let stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+          if (index < Math.floor(ratingValue)) {
+            star.style.color = 'gold';
+          } else if (index === Math.floor(ratingValue) && ratingValue % 1 !== 0) {
+            star.setAttribute('name', 'star-half');
+            star.style.color = 'gold'; 
+          } else {
+            star.style.color = 'gray';
+          }
+        }
+  );
+}
+// var button = document.querySelector('button[name="star"]');
+
+//button.setAttribute('name', 'star-half');
+
         const btn = document.querySelector("button");
         const widget = document.querySelector(".star-widget");
         const editBtn = document.querySelector(".edit");

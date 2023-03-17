@@ -1004,3 +1004,64 @@ form .btn button:hover{
   letter-spacing: 1px;
   margin-bottom: 0!important;
 }
+/* for verification message */
+.verificationMessageBox{
+  background-color: #46A8F5;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.msg-restaurant-icon{
+  color: #46A8F5;
+  background-color: white;
+  font-size: 2.4rem;
+  padding: 8px 8px;
+  border-radius: 50%;
+}
+.verification-msg{
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: white;
+}
+/* customer-review */
+.customer-review-box{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.customer-review-img-name{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.customer-review-letter{
+  width: 3.5rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  color: #fff;
+  background-color: #FF7F00;
+}
+.customer-review-name{
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+}
+.customer-review-rate-date{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.star{
+  font-size: 1.6rem;
+}
+.customer-review-date{
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.customer-review-message{
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
